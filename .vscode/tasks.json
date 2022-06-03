@@ -1,0 +1,32 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [        
+        {
+            "type": "cppbuild",
+            "label": "C/C++: cl.exe 建置使用中檔案",
+            "command": "cl.exe",
+            "args": [
+                "/Zi",
+                "/EHsc",
+                "/nologo",
+                "/Fe:",                
+                "${fileDirname}\\build\\${fileBasenameNoExtension}.exe",
+                "${file}",
+                "Ws2_32.lib"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$msCompile"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "編譯器: cl.exe"
+        }
+    ]
+}
